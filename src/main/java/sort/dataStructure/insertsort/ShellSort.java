@@ -4,7 +4,7 @@ import sort.dataStructure.Sort;
 
 /**
  * <p>标题: </p>
- * <p>功能描述: </p>
+ * <p>功能描述: 希尔排序</p>
  *
  * <p>创建时间: 2019/3/13 10:40</p> 
  * <p>作者：yaoq</p>

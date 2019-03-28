@@ -5,7 +5,7 @@ import sort.dataStructure.SortUtils;
 
 /**
  * <p>标题: </p>
- * <p>功能描述: </p>
+ * <p>功能描述:插入排序 </p>
  *
  * <p>创建时间: 2019/3/13 7:15</p> 
  * <p>作者：yaoq</p>
