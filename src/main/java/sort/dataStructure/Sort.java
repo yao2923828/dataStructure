@@ -10,5 +10,6 @@ package sort.dataStructure;
  * ====================================================================<br>
  */
 public interface Sort {
+    int a=0;
     int [] sort(int [] data);
 }
