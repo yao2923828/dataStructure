@@ -1,7 +1,7 @@
 package sort.dataStructure;
 
 import org.junit.Test;
-import sort.dataStructure.swapsort.QuickSort;
+import sort.dataStructure.selectsort.HeapSort2;
 
 /**
  * <p>标题: </p>
@@ -22,7 +22,7 @@ public class App {
         }
         System.out.println();
 
-        Sort sort=new QuickSort();
+        Sort sort=new HeapSort2();
         data=sort.sort(data);
         System.out.println("排序后的数字序列：");
         for (int i=0;i<data.length;i++){
