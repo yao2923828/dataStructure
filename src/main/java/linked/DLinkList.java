@@ -11,7 +11,7 @@ package linked;
  */
 public class DLinkList<E> implements ILinarList<E> {
     private  Node<E> start;
-    int size;
+    int size;  
     private static class Node<E> {
         E item;
         Node<E> next;
