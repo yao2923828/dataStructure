@@ -1,7 +1,8 @@
 package sort.dataStructure;
 
+import algorithm.sort.dataStructure.Sort;
+import algorithm.sort.dataStructure.selectsort.HeapSort;
 import org.junit.Test;
-import sort.dataStructure.selectsort.HeapSort2;
 
 /**
  * <p>标题: </p>
@@ -22,7 +23,7 @@ public class App {
         }
         System.out.println();
 
-        Sort sort=new HeapSort2();
+        Sort sort=new HeapSort();
         data=sort.sort(data);
         System.out.println("排序后的数字序列：");
         for (int i=0;i<data.length;i++){
