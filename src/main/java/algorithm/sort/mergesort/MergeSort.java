@@ -1,6 +1,6 @@
-package algorithm.sort.dataStructure.mergesort;
+package algorithm.sort.mergesort;
 
-import algorithm.sort.dataStructure.Sort;
+import algorithm.sort.Sort;
 
 /**
  * <p>标题: </p>

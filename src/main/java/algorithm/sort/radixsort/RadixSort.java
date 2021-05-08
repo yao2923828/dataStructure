@@ -1,6 +1,6 @@
-package algorithm.sort.dataStructure.radixsort;
+package algorithm.sort.radixsort;
 
-import algorithm.sort.dataStructure.Sort;
+import algorithm.sort.Sort;
 
 /**
  * <p>标题: </p>

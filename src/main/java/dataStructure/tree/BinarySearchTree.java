@@ -1,5 +1,8 @@
 package dataStructure.tree;
 
+/**
+ * 二分查找树的实现
+ */
 public class BinarySearchTree {
   private Node tree;
 

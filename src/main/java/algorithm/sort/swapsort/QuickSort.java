@@ -1,6 +1,6 @@
-package algorithm.sort.dataStructure.swapsort;
+package algorithm.sort.swapsort;
 
-import algorithm.sort.dataStructure.Sort;
+import algorithm.sort.Sort;
 
 /**
  * <p>标题: </p>

@@ -1,4 +1,4 @@
-package algorithm.sort.dataStructure;
+package algorithm.sort;
 
 /**
  * @author wangjunwei87

@@ -1,5 +1,8 @@
 package dataStructure.array;
 
+/**
+ * 动态数组的实现
+ */
 public class GenericArray<T> {
     private T[] data;
     private int size;
