@@ -1,7 +1,7 @@
-package algorithm.sort.dataStructure.selectsort;
+package algorithm.sort.selectsort;
 
-import algorithm.sort.dataStructure.Sort;
-import algorithm.sort.dataStructure.SortUtils;
+import algorithm.sort.Sort;
+import algorithm.sort.SortUtils;
 
 /**
  * <p>标题: </p>

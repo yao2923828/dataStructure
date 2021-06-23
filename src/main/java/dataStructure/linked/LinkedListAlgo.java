@@ -12,11 +12,11 @@ package dataStructure.linked;
 public class LinkedListAlgo {
 
   // 单链表反转
-  public static Node reverse(Node list) {
+  public static Node reverse(Node head) {
     Node headNode = null;
 
     Node previousNode = null;
-    Node currentNode = list;
+    Node currentNode = head;
     while (currentNode != null) {
       Node nextNode = currentNode.next;
       if (nextNode == null) {
@@ -30,7 +30,7 @@ public class LinkedListAlgo {
     return headNode;
   }
 
-  // 检测环
+  // 检测环,参考资料https://blog.csdn.net/shinanhualiu/article/details/51907269
   public static boolean checkCircle(Node list) {
     if (list == null) return false;
 

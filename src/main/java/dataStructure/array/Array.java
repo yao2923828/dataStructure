@@ -23,8 +23,9 @@ public class Array {
     }
 
     //根据索引，找到数据中的元素并返回
-    public int find(int index){
-        if (index<0 || index>=count) return -1;
+    public int find(int index) {
+        if (index < 0 || index >= count)
+            return -1;
         return data[index];
     }
 

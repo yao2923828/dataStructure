@@ -1,7 +1,7 @@
 package sort.dataStructure;
 
-import algorithm.sort.dataStructure.Sort;
-import algorithm.sort.dataStructure.selectsort.HeapSort;
+import algorithm.sort.Sort;
+import algorithm.sort.selectsort.HeapSort;
 import org.junit.Test;
 
 /**

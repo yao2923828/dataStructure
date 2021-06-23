@@ -1,6 +1,6 @@
-package algorithm.sort.dataStructure.insertsort;
+package algorithm.sort.insertsort;
 
-import algorithm.sort.dataStructure.Sort;
+import algorithm.sort.Sort;
 
 /**
  * <p>标题: </p>
