@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.算法思想;
 
 import java.util.ArrayList;
 import java.util.Arrays;

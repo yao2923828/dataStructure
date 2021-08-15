@@ -1,4 +1,4 @@
-package offer;
+package offer.数据结构;
 
 import java.util.ArrayList;
 import java.util.Stack;

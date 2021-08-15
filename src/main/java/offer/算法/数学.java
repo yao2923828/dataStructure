@@ -1,4 +1,4 @@
-package offer;
+package offer.算法;
 
 /**
  * <p>标题: </p>

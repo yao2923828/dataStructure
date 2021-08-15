@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.算法思想;
 
 /**
  * <p>标题: </p>
