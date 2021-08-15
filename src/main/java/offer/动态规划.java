@@ -3,6 +3,7 @@ package offer;
 import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -102,6 +103,9 @@ public class 动态规划 {
 
     /**
      * 礼物的最大价值
+     * 步骤1：定义数组元素：dp[j] 代表以字符s[j] 为结尾的 “最长不重复子字符串” 的长度
+     * 步骤2：递归式：dp[j] = dp[j - 1] + 1 或者 j-i(i为左边距离最近的相同字符)
+     * 步骤3：
      */
     public int getMost(int[][] values) {
         if (values == null || values.length == 0 || values[0].length == 0)
@@ -118,29 +122,28 @@ public class 动态规划 {
 
     /**
      * 最长不含重复字符的子字符串
+     * 步骤1：定义数组元素：dp[j] 代表以字符s[j] 为结尾的 “最长不重复子字符串” 的长度
+     * 步骤2：递归式：dp[j] = dp[j - 1] + 1 或者 j-i(i为左边距离最近的相同字符)
+     * 步骤3：
      */
-    public int longestSubStringWithoutDuplication(String str) {
-        int curLen = 0;
-        int maxLen = 0;
-        int[] preIndexs = new int[26];
-        Arrays.fill(preIndexs, -1);
-        for (int curI = 0; curI < str.length(); curI++) {
-            int c = str.charAt(curI) - 'a';
-            int preI = preIndexs[c];
-            if (preI == -1 || curI - preI > curLen) {
-                curLen++;
-            } else {
-                maxLen = Math.max(maxLen, curLen);
-                curLen = curI - preI;
-            }
-            preIndexs[c] = curI;
+    public int lengthOfLongestSubstring(String s) {
+        Map<Character, Integer> dic = new HashMap<>();
+        int res = 0, tmp = 0;
+        for(int j = 0; j < s.length(); j++) {
+            int i = dic.getOrDefault(s.charAt(j), -1); // 获取索引 i
+            dic.put(s.charAt(j), j); // 更新哈希表
+            tmp = tmp < j - i ? tmp + 1 : j - i; // dp[j - 1] -> dp[j]
+            res = Math.max(res, tmp); // max(dp[j - 1], dp[j])
         }
-        maxLen = Math.max(maxLen, curLen);
-        return maxLen;
+        return res;
     }
+
 
     /**
      * 丑数
+     * 步骤1：定义数组元素：dp[i]表示从小到大，第i+1个丑数
+     * 步骤2：递归式：dp[i]似乎与前面的值没有比较直接关系，而是与2,3,5有关系
+     * 步骤3：初始化：
      */
     public int GetUglyNumber_Solution(int N) {
         if (N <= 6)
@@ -163,10 +166,18 @@ public class 动态规划 {
 
     /**
      * n 个骰子的点数
+     * 输入: 1
+     * 输出: [0.16667,0.16667,0.16667,0.16667,0.16667,0.16667]
+     * 问题1：递归式如何理解,数组定义如何理解
+     * 问题2：和的范围，应该是N到6*N.
+     * 步骤1：定义数组元素：d[i][j]表示前i个骰子产生点数j的次数
+     * 步骤2：递归式：虽然是这个关系，但是是怎么想出来的,理解不了啊。
+     * 步骤3：初始化：
      */
     public List<Map.Entry<Integer, Double>> dicesSum(int n) {
         final int face = 6;
         final int pointNum = face * n;
+        //如何搞清楚数据值的变化，以及理解DP的含义，只有靠画图了
         long[][] dp = new long[n + 1][pointNum + 1];
 
         for (int i = 1; i <= face; i++)
@@ -185,31 +196,6 @@ public class 动态规划 {
         return ret;
     }
 
-    public List<Map.Entry<Integer, Double>> dicesSum2(int n) {
-        final int face = 6;
-        final int pointNum = face * n;
-        long[][] dp = new long[2][pointNum + 1];
-
-        for (int i = 1; i <= face; i++)
-            dp[0][i] = 1;
-
-        int flag = 1;                                     /* 旋转标记 */
-        for (int i = 2; i <= n; i++, flag = 1 - flag) {
-            for (int j = 0; j <= pointNum; j++)
-                dp[flag][j] = 0;                          /* 旋转数组清零 */
-
-            for (int j = i; j <= pointNum; j++)
-                for (int k = 1; k <= face && k <= j; k++)
-                    dp[flag][j] += dp[1 - flag][j - k];
-        }
-
-        final double totalNum = Math.pow(6, n);
-        List<Map.Entry<Integer, Double>> ret = new ArrayList<>();
-        for (int i = n; i <= pointNum; i++)
-            ret.add(new AbstractMap.SimpleEntry<>(i, dp[1 - flag][i] / totalNum));
-
-        return ret;
-    }
 
     /**
      * 构建乘积数组
@@ -224,10 +210,5 @@ public class 动态规划 {
         for (int i = n - 1, product = 1; i >= 0; product *= A[i], i--)  /* 从右往左累乘 */
             B[i] *= product;
         return B;
-    }
-    public static void main(String[] args) {
-        动态规划 solution=new 动态规划();
-
-        solution.multiply(new int[]{1,2,3,4,5});
     }
 }
