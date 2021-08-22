@@ -75,7 +75,4 @@ public class 数学 {
         return count;
     }
 
-    public static void main(String[] args) {
-        System.out.println(countDigitOne(13));
-    }
 }

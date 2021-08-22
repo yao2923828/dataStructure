@@ -257,11 +257,5 @@ public class 其他 {
         return isNegative ? -ret : ret;
     }
 
-    public static void main(String[] args) {
-        其他 solution=new 其他();
 
-        solution.StrToInt(
-                "+2147483647"
-        );
-    }
 }

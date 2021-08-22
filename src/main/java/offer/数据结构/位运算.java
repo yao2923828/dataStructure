@@ -1,10 +1,10 @@
-package offer.算法;
+package offer.数据结构;
 
 /**
  * <p>标题: </p>
  * <p>功能描述: </p>
  *
- * <p>创建时间: 2021/7/28 7:26</p> 
+ * <p>创建时间: 2021/8/23 6:31</p> 
  * <p>作者：yaoq</p>
  * <p>修改历史记录：</p>
  * ====================================================================<br>
@@ -13,7 +13,7 @@ public class 位运算 {
     /**
      * 二进制中 1 的个数
      */
-    public  int NumberOf1(int n) {
+    public int NumberOf1(int n) {
         int cnt = 0;
         while (n != 0) {
             cnt++;
@@ -21,7 +21,6 @@ public class 位运算 {
         }
         return cnt;
     }
-
     /**
      * 数组中只出现一次的数字
      */
@@ -47,9 +46,5 @@ public class 位运算 {
         int t = nums[0];
         nums[0] = nums[1];
         nums[1] = t;
-    }
-    public static void main(String[] args) {
-        位运算 solution=new 位运算();
-        System.out.println(solution.FindNumsAppearOnce(new int[]{1,4,1,6}));
     }
 }
