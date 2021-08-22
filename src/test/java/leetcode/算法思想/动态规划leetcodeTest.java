@@ -1,5 +1,4 @@
-package leetcode;
-import leetcode.算法思想.动态规划leetcode;
+package leetcode.算法思想;
 import org.junit.Test;
 
 import java.util.Arrays;
