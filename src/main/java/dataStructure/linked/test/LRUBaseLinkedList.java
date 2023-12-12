@@ -1,4 +1,4 @@
-package dataStructure.linked;
+package dataStructure.linked.test;
 
 
 import java.util.Scanner;

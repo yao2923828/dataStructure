@@ -7,6 +7,8 @@ package leetcode.数据结构;
  * <p>创建时间: 2021/8/16 6:57</p> 
  * <p>作者：yaoq</p>
  * <p>修改历史记录：</p>
+ * 解题技巧：
+ * 1.统计二进制1或者0的个数
  * ====================================================================<br>
  */
 public class 位运算 {
@@ -49,6 +51,12 @@ public class 位运算 {
             ret = ret ^ i ^ nums[i];
         }
         return ret ^ nums.length;
+    }
+
+    public static void main(String[] args) {
+        位运算 testClass=new 位运算();
+        int [] nums={0,1,2,4,5};
+        System.out.println(testClass.missingNumber(nums));
     }
     /**
      * 数组中不重复的两个元素

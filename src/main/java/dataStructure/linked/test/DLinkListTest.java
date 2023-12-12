@@ -1,4 +1,7 @@
-package dataStructure.linked;
+package dataStructure.linked.test;
+
+import dataStructure.linked.DLinkList;
+import dataStructure.linked.ILinarList;
 
 /**
  * <p>标题: 线性表</p>

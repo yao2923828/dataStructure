@@ -1,4 +1,4 @@
-package dataStructure.linked;
+package dataStructure.linked.test;
 
 /**
  * 1）单链表的插入、删除、查找操作；
@@ -303,7 +303,7 @@ public class SinglyLinkedList {
     }
     public static void main(String[]args){
 
-        SinglyLinkedList link = new SinglyLinkedList(); 
+        SinglyLinkedList link = new SinglyLinkedList();
         System.out.println("hello");
         //int data[] = {1};
         //int data[] = {1,2};

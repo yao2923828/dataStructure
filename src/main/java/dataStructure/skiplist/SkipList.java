@@ -3,6 +3,16 @@ package dataStructure.skiplist;
 import java.util.Random;
 
 /**
+ * 0911：还是有点不了解，解题需要解决的几个问题
+ * 1.建模，抽象出需要解决的程序问题。
+ * 2.使用哪种数据结构，或者数据结构的组合。
+ *
+ * 数组下标的移动，对应的实际影响。
+ *
+ */
+
+
+/**
  * 跳表的一种实现方法。
  * 跳表中存储的是正整数，并且存储的是不重复的。
  *
@@ -35,6 +45,7 @@ public class SkipList {
 
   public void insert(int value) {
     int level = randomLevel();
+
     Node newNode = new Node();
     newNode.data = value;
     newNode.maxLevel = level;
@@ -118,6 +129,18 @@ public class SkipList {
 
       return builder.toString();
     }
+  }
+
+  public static void main(String[] args) {
+    SkipList skipList=new SkipList();
+    skipList.insert(30);
+    skipList.insert(40);
+    skipList.insert(50);
+    skipList.insert(60);
+    skipList.insert(70);
+    skipList.insert(90);
+    skipList.insert(80);
+    skipList.insert(45);
   }
 
 }

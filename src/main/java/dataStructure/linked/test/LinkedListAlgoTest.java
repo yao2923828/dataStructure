@@ -1,4 +1,4 @@
-package dataStructure.linked;
+package dataStructure.linked.test;
 
 /**
  * 1) 单链表反转
@@ -11,7 +11,8 @@ package dataStructure.linked;
  */
 public class LinkedListAlgoTest {
 
-  // 单链表反转
+  // 单链表反转,
+  // <br>技巧，从尾指针开始处理</br>
   public static Node reverse(Node head) {
     Node previousNode=null;
     Node currentNode=head;
@@ -32,6 +33,7 @@ public class LinkedListAlgoTest {
   }
 
   // 检测环
+  //快慢指针
   public static boolean checkCircle(Node list) {
     if(list==null){
       return false;
@@ -48,6 +50,7 @@ public class LinkedListAlgoTest {
     }
 
     return false;
+
   }
 
   // 有序链表合并,这里需要分两种情况，是否允许使用额外的空间。默认应该是不允许的

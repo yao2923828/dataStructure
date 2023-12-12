@@ -91,6 +91,7 @@ public class LinkedListAlgo {
     while (fast != null && i < k) {
       fast = fast.next;
       ++i;
+
     }
 
     if (fast == null) return list;

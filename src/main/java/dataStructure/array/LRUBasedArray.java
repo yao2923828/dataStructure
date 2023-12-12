@@ -1,4 +1,4 @@
-package dataStructure.linked;
+package dataStructure.array;
 
 import java.util.HashMap;
 import java.util.Map;
